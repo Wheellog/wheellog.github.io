@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  background: #f4f4f4;
+  color: #333;
+}
+
+#summary {
+  margin-bottom: 40px;
+}
+
+/* Строка с километражем и временем */
+.summary-container {
+  margin-bottom: 30px;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Контейнер для 4-столбцовой сетки */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Каждый блок */
+.stat-block {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.stat-block h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.stat-block p {
+  margin: 4px 0;
+  font-size: 0.95em;
+}
+
+/* График */
+#chart {
+  width: 100%;
+  height: 600px;
+  margin-top: 40px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 10px;
+}
