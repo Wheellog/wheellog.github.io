@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Анализ поездки</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Подключение библиотек -->
-  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Анализ поездки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Подключение стилей -->
-  <link rel="stylesheet" href="styles.css">
+    <!-- Подключение библиотек -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+    <!-- Leaflet для карты -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h2>Загрузите CSV-файл с поездкой</h2>
-  <input type="file" id="csvFile" accept=".csv" />
+<h2>Загрузите CSV-файл с поездкой</h2>
+<input type="file" id="csvFile" accept=".csv"/>
 
-  <!-- Сюда будет вставлен текст + блоки -->
-  <div id="summary">
+<!-- Сюда будет вставлен текст + блоки -->
+<div id="summary">
     <div class="summary-container" id="summary-line"></div>
     <div class="stats-container" id="summary-stats"></div>
-  </div>
+</div>
 
-  <!-- График -->
-  <div id="chart"></div>
+<!-- Переключатель карты -->
+<label style="display:block; margin-bottom:10px;">
+    <input type="checkbox" id="toggleMap"/> Показать карту
+</label>
 
-  <!-- Скрипт -->
-  <script src="script.js"></script>
+<!-- Контейнер для графика и карты -->
+<div id="main-container">
+    <!-- График -->
+    <div id="chart"></div>
+    <!--    Карта-->
+    <div id="map"></div>
+</div>
+
+<!-- Скрипт -->
+<script src="script.js"></script>
 </body>
 </html>
